@@ -1,0 +1,73 @@
+name: ComputerVision
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  # ========================================================
+  # 1 - 🌱 BASE DO PROJETO
+  # - Definição da versão do Python e configurações para o ambiente base
+  # ========================================================
+  - python=3.11     # Versão do Python para o ambiente do projeto
+
+  # ========================================================
+  # 2 - 📒 JUPYTER E AMBIENTE DE NOTEBOOKS
+  # - Ferramentas para criar, rodar e interagir com notebooks Jupyter
+  # ========================================================
+  - jupyter         # Ferramenta para rodar notebooks interativos
+  - jupyterlab      # Interface para notebooks com mais funcionalidades
+  - ipykernel       # Kernel para executar código Python nos notebooks
+
+  # ========================================================
+  # 3 - 🔢 BIBLIOTECAS MATEMÁTICAS E MANIPULAÇÃO DE DADOS
+  # - Estruturas de dados, operações numéricas e barra de progresso
+  # ========================================================
+  - numpy           # Para operações numéricas e manipulação de arrays
+  - pandas          # Para manipulação de dados estruturados (DataFrames)
+  - tqdm            # Barra de progresso para loops e operações
+
+  # ========================================================
+  # 4 - 🖼️ LEITURA, VISUALIZAÇÃO E VERIFICAÇÃO DE IMAGENS
+  # - Ferramentas para carregar e visualizar imagens
+  # ========================================================
+  - matplotlib      # Para plotar gráficos e visualização de dados
+  - seaborn         # Para visualização de dados estatísticos
+  - scikit-image    # Para processamento de imagens
+
+  # ========================================================
+  # 5 - 👁️ VISÃO COMPUTACIONAL
+  # - Detecção facial, landmarks e utilitários visuais
+  # ========================================================
+  - cmake           # Necessário para compilar o Dlib
+  - dlib            # Para detecção facial e landmarks
+
+  # ========================================================
+  # 6 - 📊 [ML] PRÉ-PROCESSAMENTO DE DADOS
+  # - Algoritmos clássicos de machine learning e pré-processamento de dados
+  # ========================================================
+  - scikit-learn    # Para algoritmos de machine learning tradicionais
+
+  # ========================================================
+  # 📦 PACOTES VIA PIP
+  # - Bibliotecas específicas, alternativas ou auxiliares
+  # ========================================================
+  - pip             # Para instalar e gerenciar pacotes (bibliotecas e frameworks)
+  - pip:
+      # ========================================================
+      # 🎥 PROCESSAMENTO DE IMAGENS (OpenCV)
+      # - Biblioteca para visão computacional e processamento de vídeo
+      # ========================================================
+      - opencv-python         # Para processamento de imagem e vídeo
+      
+      # ========================================================
+      # 🧠 [DL] CONSTRUÇÃO E TREINAMENTO DE MODELO CNN (KERAS)
+      # - Arquitetura, otimização e regularização do modelo de classificação e segmentação
+      # ========================================================
+      - tensorflow  # Framework de deep learning de baixo nível
+      - keras       # API de alto nível para construção de modelos deep learning
+
+      # ========================================================
+      # 🎨 MODELOS DE SEGMENTAÇÃO (segmentation-models)
+      # - Pacote para facilitar o uso de modelos de segmentação (DeepLab, Unet, FPN, PSPNet, etc.)
+      # ========================================================
+      - segmentation-models   # Para segmentação de imagens com TensorFlow (DeepLab, Unet)
